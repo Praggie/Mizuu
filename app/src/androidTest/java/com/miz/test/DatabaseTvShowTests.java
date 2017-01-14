@@ -759,7 +759,7 @@ public class DatabaseTvShowTests extends InstrumentationTestCase {
         assertEquals(1, dbMappings.getAllFilepaths("12345").getCount());
     }
 
-    public void testGetAllIgnoredFilepaths() {
+   /* public void testGetAllIgnoredFilepaths() {
         getAndResetDatabase();
 
         DbAdapterTvShowEpisodeMappings dbMappings = MizuuApplication.getTvShowEpisodeMappingsDbAdapter();
@@ -774,7 +774,7 @@ public class DatabaseTvShowTests extends InstrumentationTestCase {
 
         assertEquals(1, dbMappings.getAllIgnoredFilepaths().getCount());
     }
-
+*/
     public void testDeleteFilepathByFilepath() {
         getAndResetDatabase();
 
@@ -797,7 +797,7 @@ public class DatabaseTvShowTests extends InstrumentationTestCase {
         assertEquals(0, dbMappings.getAllFilepaths().getCount());
     }
 
-    public void testIgnoreFilepath() {
+   /* public void testIgnoreFilepath() {
         getAndResetDatabase();
 
         DbAdapterTvShowEpisodeMappings dbMappings = MizuuApplication.getTvShowEpisodeMappingsDbAdapter();
@@ -810,7 +810,7 @@ public class DatabaseTvShowTests extends InstrumentationTestCase {
         c.moveToFirst();
 
         assertEquals("1", c.getString(c.getColumnIndex(DbAdapterTvShowEpisodeMappings.KEY_IGNORED)));
-    }
+    }*/
 
     public void testDeleteAllFilepathsByShowId() {
         getAndResetDatabase();
@@ -908,7 +908,7 @@ public class DatabaseTvShowTests extends InstrumentationTestCase {
         assertEquals(0, dbMappings.getAllFilepaths("1234").getCount());
     }
 
-    public void testIgnoreSeason() {
+   /* public void testIgnoreSeason() {
         getAndResetDatabase();
 
         DbAdapterTvShowEpisodeMappings dbMappings = MizuuApplication.getTvShowEpisodeMappingsDbAdapter();
@@ -926,7 +926,7 @@ public class DatabaseTvShowTests extends InstrumentationTestCase {
         dbMappings.ignoreSeason("1234", 6);
 
         assertEquals(3, dbMappings.getAllIgnoredFilepaths().getCount());
-    }
+    }*/
 
     /**
      * Creates a test TV show in the database.

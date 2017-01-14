@@ -187,7 +187,7 @@ public class DatabaseMovieTests extends InstrumentationTestCase {
         assertEquals(1, dbMappings.getMovieFilepaths("1234").size());
 
         // Ignore the movie based on its movie ID
-        MovieDatabaseUtils.ignoreMovie("1234");
+      //  MovieDatabaseUtils.ignoreMovie("1234");
 
         // We've just ignored the movie, hence removing it from the movie database
         assertEquals(0, db.count());

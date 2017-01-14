@@ -150,12 +150,12 @@ public class MizLib {
         return key;
     }
 
-    public static String getTvdbApiKey(Context context) {
+   /* public static String getTvdbApiKey(Context context) {
         String key = context.getString(R.string.tvdb_api_key);
         if (TextUtils.isEmpty(key) || key.equals("add_your_own"))
             throw new RuntimeException("You need to add a TVDb API key!");
         return key;
-    }
+    }*/
 
     public static boolean isVideoFile(String s) {
         String[] fileTypes = new String[]{".3gp",".aaf.","mp4",".ts",".webm",".m4v",".mkv",".divx",".xvid",".rec",".avi",".flv",".f4v",".moi",".mpeg",".mpg",".mts",".m2ts",".ogv",".rm",".rmvb",".mov",".wmv",".iso",".vob",".ifo",".wtv",".pyv",".ogm",".img"};
@@ -1299,6 +1299,9 @@ public class MizLib {
         return new Request.Builder()
                 .url(url)
                 .addHeader("Content-type", "application/json")
+                .addHeader("trakt-api-key", "43efecdf3f16820856d75c4b4d40d1b1d6d9dd1485dd0edc933d7694ce427178")
+                .addHeader("trakt-api-version", "2")
+                .addHeader("trakt-user-login", username)
                 .post(RequestBody.create(MediaType.parse("application/json"), holder.toString()))
                 .build();
     }

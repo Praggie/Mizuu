@@ -162,7 +162,7 @@ public class AccountsFragment extends Fragment {
 			
 			try {
 				
-				Request request = MizLib.getTraktAuthenticationRequest("http://api.trakt.tv/account/test/" + mTraktApiKey, username, MizLib.SHA1(password));
+				Request request = MizLib.getTraktAuthenticationRequest("http://api-v2launch.trakt.tv/auth/login", username, MizLib.SHA1(password));
 				Response response = MizuuApplication.getOkHttpClient().newCall(request).execute();
 				JSONObject jObject = new JSONObject(response.body().string());
 				
